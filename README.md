@@ -29,4 +29,6 @@ snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile w
 ```
 #### (10) Predict HCsig signatures (n=5) using [CentriodClassification](https://github.com/sunnyveerla/CentriodClassification).
 ```bash
+java -jar -Xmx10g CentriodClassification.jar /path/to/input_folder/ sample-by-component_matrix_filename (without extension) /path/to/output_folder/
+
 ```
