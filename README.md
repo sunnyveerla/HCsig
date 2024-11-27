@@ -1,11 +1,9 @@
 # HCsig
-Cervical samples based HGSC signatures
+High-grade serous ovarian carcinoma-derived copy number signatures in diagnostic and archival cervical samples
 ## Introduction
 
 ### Bioinformatic workflow
 [BINP52_CNA_Framework](https://github.com/IngridHLab/BINP52_CNA_Framework), a pipeline to generate copy number profiles and detect copy number signatures from shallow whole genome sequening (sWGS) samples.
-
-[CerCNsig](https://github.com/IngridHLab/CerCNsig), a workflow to optimal absolute copy number profiles and generate of copy number signatures for cervical Samples from high grade serous carcinoma patients.
 
 The version of tools and packages to be used will be specified in each step (see chapter 3). The scripts within the pipeline are based on Python (v3.11.6) and R (v4.3.2).
 - (1) Preprocessing. This step includes quality assessment and quality trimming on the raw reads. (`Fastp` will be used for QC and trimming, together with `fastqc` and `multiQC` to generate the QC reports.)
@@ -17,4 +15,4 @@ The version of tools and packages to be used will be specified in each step (see
 - (7) Comparison with the recent HGSC signatures (n=7). The functions should be loaded from the github repository: https://bitbucket.org/britroc/cnsignatures.git .
 - (8) Comparison with the Pan-Cancer signatures (n=17). The package `CINSignatureQuantification` will be used to generate the samply-by-component matrix for the Pan-Cancer chromosomal instability signatures.
 - (9) Comparison with the panConusig signatures (n=25). Tools including `Battenberg` (`alleleCounter`, `impute2` and `beagle5` were included in this package), `ASCAT.sc` and `panConusig` will be used in this step.  
-- (10) Generate and validate CerCN signatures (n=6) and the HGSC prediction model. Tools including mixture modeling `flexmix`, unsupervised clustering `NMF`, cosine similarity `lsa`, k-fold particitioning `caret` and `randomforest` will be used in this step.
+- (10) Generate and validate HCsig signatures (n=5) and the HGSC prediction model. Tools including [SRIQ clustering](https://github.com/sunnyveerla/SRIQ) will be used in this step.
