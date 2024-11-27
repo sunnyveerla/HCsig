@@ -1,0 +1,26 @@
+#__author__ = "Srinivas Veerla"
+#__copyright__ = "Copyright 2024, Srinivas Veerla"
+#__email__ = "srinivas.veerla@med.lu.se"
+#__license__ = "GPL-3"
+
+# Working directory
+workdir: '/media/sunny/WorkDisk/SV/HCsig/'
+
+
+# Sample information file
+samples: 'config/All_samples.csv'
+
+#Location for results storage
+outputdir: 'results/'
+
+#Reads Mapping 
+bwa_mapping:
+  threads: 48
+  
+# QDNAseq settings
+QDNAseq:
+  binsize: 50  
+  maxSize: 850  
+  threads: 24
+
+
