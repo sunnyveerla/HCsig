@@ -18,7 +18,7 @@ The version of tools and packages to be used will be specified in each step (see
 - (9) Comparison with the panConusig signatures (n=25). Tools including `Battenberg` (`alleleCounter`, `impute2` and `beagle5` were included in this package), `ASCAT.sc` and `panConusig` will be used in this step.  
 - (10) Generate and validate HCsig signatures (n=5) and the HGSC prediction model. Tools including [SRIQ clustering](https://github.com/sunnyveerla/SRIQ), and [CentriodClassification](https://github.com/sunnyveerla/CentriodClassification) will be used in this step.
 
-### Analysis steps predicting HCsig:
+### Analysis steps for predicting HCsig:
 #### (1) Preprocessing, (2) Alignment.
 ```bash
 snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile workflow/Snakemake_HCsig_Pipeline.smk
