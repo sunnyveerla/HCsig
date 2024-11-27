@@ -21,6 +21,7 @@ The version of tools and packages to be used will be specified in each step (see
 ### Analysis steps predicting HCsig:
 #### (1) Preprocessing, (2) Alignment, (3) Clean-up.
 ```bash
+snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile workflow/Snakemake_HCsig_Pipeline.smk
 ```
 #### (4) Relative copy number profile, (5) Ploidy and cellularity solutions, (6) Absolute copy number profile.
 ```bash
