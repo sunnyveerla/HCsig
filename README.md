@@ -25,3 +25,9 @@ The version of tools and packages to be used will be specified in each step (see
 #### (4) Relative copy number profile, (5) Ploidy and cellularity solutions, (6) Absolute copy number profile.
 ```bash
 ```
+#### (7) Generate sample-by-component matrix using the GitHub package [CNsignatures](https://bitbucket.org/britroc/cnsignatures.git)
+```bash
+```
+#### (10) Predict HCsig signatures (n=5) using [CentriodClassification](https://github.com/sunnyveerla/CentriodClassification).
+```bash
+```
