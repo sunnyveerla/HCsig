@@ -25,7 +25,7 @@ snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile w
 ```
 #### (4) Relative copy number profile, (5) Ploidy and cellularity solutions, (6) Absolute copy number profile, (7) Generate sample-by-component matrix using the GitHub package [CNsignatures](https://bitbucket.org/britroc/cnsignatures.git)
 ```bash
-snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile workflow/Snakemake_HCsig_Pipeline.smk
+snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile workflow/Snakemake_QDNASeq_RASCAL_CN_matrix.smk
 ```
 #### (10) Predict HCsig signatures (n=5) using [CentriodClassification](https://github.com/sunnyveerla/CentriodClassification).
 ```bash
