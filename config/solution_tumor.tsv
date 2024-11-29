@@ -1,0 +1,19 @@
+Sample	Patient	Type	Group	Binsize	rds	Ploidy	Cellularity
+1	CS1_14	HGSOC_81	ffTumor	ffTumor	30	results/CS1_14/04_relative_CN/30kb/CS1_14_30kb.rds	2.99	0.73
+2	CS1_6	HGSOC_137	ffTumor_metastasis	ffTumor	30	results/CS1_6/04_relative_CN/30kb/CS1_6_30kb.rds	2	0
+3	CS1_10	HGSOC_140	ffTumor	ffTumor	30	results/CS1_10/04_relative_CN/30kb/CS1_10_30kb.rds	2	0
+4	CS2_09	HGSOC_45	ffTumor	ffTumor	30	results/CS2_09/04_relative_CN/30kb/CS2_09_30kb.rds	1.99	0.66
+5	CS2_15	HGSOC_48	ffTumor	ffTumor	30	results/CS2_15/04_relative_CN/30kb/CS2_15_30kb.rds	1.88	0.88
+6	CS2_10	HGSOC_56	ffTumor	ffTumor	30	results/CS2_10/04_relative_CN/30kb/CS2_10_30kb.rds	2.74	0.94
+7	CS2_11	HGSOC_70	ffTumor	ffTumor	30	results/CS2_11/04_relative_CN/30kb/CS2_11_30kb.rds	2.4	0.81
+8	CS2_12	HGSOC_80	ffTumor	ffTumor	30	results/CS2_12/04_relative_CN/30kb/CS2_12_30kb.rds	2.32	0.72
+9	CS2_13	HGSOC_96	ffTumor	ffTumor	30	results/CS2_13/04_relative_CN/30kb/CS2_13_30kb.rds	1.89	0.66
+10	CS2_14	HGSOC_117	ffTumor	ffTumor	30	results/CS2_14/04_relative_CN/30kb/CS2_14_30kb.rds	1.84	0.85
+11	CS2_16	HGSOC_118	ffTumor	ffTumor	30	results/CS2_16/04_relative_CN/30kb/CS2_16_30kb.rds	1.96	0.36
+12	CS2_170	HGSOC_A2	ffTumor	ffTumor	30	results/CS2_170/04_relative_CN/30kb/CS2_170_30kb.rds	2	0
+13	CS2_171	HGSOC_A3	ffTumor	ffTumor	30	results/CS2_171/04_relative_CN/30kb/CS2_171_30kb.rds	2	0
+14	CS2_172	HGSOC_A5	ffTumor	ffTumor	30	results/CS2_172/04_relative_CN/30kb/CS2_172_30kb.rds	1.97	0.84
+15	CS2_173	HGSOC_A13	ffTumor	ffTumor	30	results/CS2_173/04_relative_CN/30kb/CS2_173_30kb.rds	2	0
+16	CS2_174	HGSOC_A19	ffTumor	ffTumor	30	results/CS2_174/04_relative_CN/30kb/CS2_174_30kb.rds	2.09	0.91
+17	CS2_175	HGSOC_A23	ffTumor	ffTumor	30	results/CS2_175/04_relative_CN/30kb/CS2_175_30kb.rds	2	0
+18	CS2_176	HGSOC_A35	ffTumor	ffTumor	30	results/CS2_176/04_relative_CN/30kb/CS2_176_30kb.rds	3.92	0.63
