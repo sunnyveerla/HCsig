@@ -27,7 +27,7 @@ rule all:
     #input:  expand(results + '{sample}/02_alignment/{sample}.sorted.bam', sample=sample_info.sample_name)	
     #input: expand(results + '{sample}/04_relative_CN/' + binsize + 'kb/{sample}_' + binsize + 'kb.seg.tsv' , sample=sample_info.sample_name)
     #input: expand(results + '{sample}/05_absolute_CN/solutions/{sample}_' + binsize + 'kb.solution.csv', sample=sample_df.sample_name)
-    input:  expand(results + '{sample}/05_absolute_CN/{sample}_'+ binsize +'kb_seg.tsv', sample=sample_info.sample_name)
+    input:  expand(results + 'signatures/CN_sig/CN_sig_' + binsize + 'kb.SCmatrix.rds', sample=sample_info.sample_name)
     
 
 ########### 1 sWGS raw data preprocessing ##########
@@ -174,3 +174,53 @@ rule rascal_absolute_CN:
         outdir = results + '{sample}/05_absolute_CN/'
     threads: 5
     script: 'scripts/fit_absoluteCN.R'
+
+rule abs_seg_CN:
+    input:
+        expand(results + '{sample}/05_absolute_CN/{sample}_' + binsize + 'kb_seg.tsv', sample=sample_info.sample_name)
+
+########## CN Signatures and sample-by-component matrix ####################
+"""
+The final output for this step would be the matrix files (including a matrix txt file, a matrix object RDS, a simple heatmap for both sample-by-component matrix and sample-by-signature matrix) for each group. The matrices containing sample-by-signature information.
+"""
+rule cn_sig_git:
+    output:
+        'scripts/cnsignatures/main_functions.R',
+        'scripts/cnsignatures/helper_functions.R'
+    shell: '''
+    git clone https://bitbucket.org/britroc/cnsignatures.git 
+    mv cnsignatures/ scripts/
+    '''
+
+# Check all the files are well prepared
+rule cn_sig_check:
+    input:
+        link_up = rules.abs_seg_CN.input,
+        scripts = rules.cn_sig_git.output
+    output:
+        'log/cn_sig_settle.txt'
+    shell: """
+    echo 'Finished preparation for signature validation.' > {output}
+    """
+
+# Validate the CN signatures in our samples
+rule CN_signature:
+    input:
+        # check whether the essential git repository have been downloaded
+        main = 'scripts/cnsignatures/main_functions.R',
+        helper = 'scripts/cnsignatures/helper_functions.R',
+        # check all the absolute copy number profiles have successfully been generated
+        check_data = rules.cn_sig_check.output,
+        # the input segment files
+        seg_files = rules.abs_seg_CN.input
+    output:
+        CN_sig = results + 'signatures/CN_sig/CN_sig.SSmatrix.rds'
+    params:
+        sample_info = config['samples'],
+        def_SC = 'scripts/cnsignatures/data/feat_sig_mat.rds',
+        indir = results,
+        binsize = binsize,
+        outdir = results + 'signatures/CN_sig/'
+    threads: 20
+    script: 'scripts/CN_sig.R'
+
