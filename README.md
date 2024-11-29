@@ -19,7 +19,7 @@ The version of tools and packages to be used will be specified in each step (see
 - (10) Generate and validate HCsig signatures (n=5) and the HGSC prediction model. Tools including [SRIQ clustering](https://github.com/sunnyveerla/SRIQ), and [CentriodClassification](https://github.com/sunnyveerla/CentriodClassification) will be used in this step.
 
 ### Analysis steps predicting HCsig:
-#### (1) Preprocessing, (2) Alignment, (4) Relative copy number profile, (5) Ploidy and cellularity solutions, (6) Absolute copy number profile,
+#### (1) Preprocessing, (2) Alignment, (3) Clean-up, (4) Relative copy number profile, (5) Ploidy and cellularity solutions, (6) Absolute copy number profile,
 ```bash
 snakemake --use-conda  --configfile config/config.yaml --cores 30  --snakefile workflow/Snakemake_HCsig_Pipeline.smk
 ```
