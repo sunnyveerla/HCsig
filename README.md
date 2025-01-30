@@ -1,5 +1,5 @@
 # HCsig
-High-grade serous ovarian carcinoma-derived copy number signatures in diagnostic and archival cervical samples
+Copy number signatures in cervical samples enable early detection of high-grade serous ovarian carcinoma
 ## Introduction
 Ovarian cancer remains a leading cause of mortality, with nearly two-thirds of patients succumbing to the disease due to late-stage diagnosis and a lack of effective screening methods. Early detection is crucial, as women diagnosed with localized disease have a survival rate exceeding 90%. Most high-grade serous tubo-ovarian carcinomas (HGSC) originate from epithelial cells in the fallopian tubes, with precursor lesions such as serous tubal intraepithelial carcinomas (STICs) and earlier dysplastic cells harbouring TP53 mutations. These findings suggest that early tumor-driving mutations may be detectable in asymptomatic women. Using shallow whole-genome sequencing (sWGS), we investigated CNAs in cervical samples from HGSC patients and controls. We applied HGSC- and pan-cancer-derived copy number signatures and developed novel signatures (HCsig) using unsupervised clustering. A centroid-based prediction model based on HCsig achieved promising sensitivity and specificity in an external validation cohort. These findings highlight the potential of sWGS on standard cervical samples for non-invasive early detection of HGSC.
 
