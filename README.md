@@ -1,3 +1,6 @@
+
+<div align="center"><img width="320" height="241" alt="HCsig_logo" src="https://github.com/user-attachments/assets/ddfccf9c-9e76-4866-96f0-e293f889d5f4" /></div>
+
 # HCsig
 Copy number signatures in cervical samples enable early detection of high-grade serous ovarian carcinoma
 ## Introduction
